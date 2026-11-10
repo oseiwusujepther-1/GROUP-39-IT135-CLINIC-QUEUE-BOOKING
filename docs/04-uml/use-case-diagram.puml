@@ -1,0 +1,39 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor Patient
+actor "Clinic Staff" as Staff
+actor "Notification Provider" as Notifications
+
+rectangle "Clinic Queue Booking System" {
+  usecase "View appointment\navailability" as UC_Availability
+  usecase "Book appointment" as UC_Book
+  usecase "View own bookings\nand queue status" as UC_View
+  usecase "Cancel or request\nreschedule" as UC_Change
+  usecase "Manage clinic\navailability" as UC_Schedule
+  usecase "Manage appointments" as UC_Manage
+  usecase "Update queue status" as UC_Queue
+  usecase "Send appointment\nor queue notification" as UC_Notify
+}
+
+Patient --> UC_Availability
+Patient --> UC_Book
+Patient --> UC_View
+Patient --> UC_Change
+
+Staff --> UC_Schedule
+Staff --> UC_Manage
+Staff --> UC_Queue
+Staff --> UC_View
+
+UC_Book ..> UC_Availability : <<include>>
+Notifications --> UC_Notify
+UC_Notify ..> UC_Book : <<extend>>
+UC_Notify ..> UC_Queue : <<extend>>
+
+note right of UC_Notify
+Optional feature; depends on
+provider and project scope.
+end note
+@enduml

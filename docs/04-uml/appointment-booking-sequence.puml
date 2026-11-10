@@ -1,0 +1,33 @@
+@startuml
+autonumber
+
+actor Patient
+boundary "Patient Interface" as UI
+control "Booking Service" as Booking
+database "Application Database" as DB
+
+Patient -> UI: Select a time slot and submit booking
+UI -> Booking: bookAppointment(patientId, slotId)
+Booking -> DB: Check slot availability
+DB --> Booking: Available / unavailable
+
+alt Slot is available
+  Booking -> DB: Create appointment and reserve slot
+  note right of DB
+  Reservation must be atomic so
+  concurrent requests cannot book
+  the same slot.
+  end note
+  DB --> Booking: Saved appointment / save error
+  alt Save succeeded
+    Booking --> UI: Booking confirmation and status
+    UI --> Patient: Display confirmed appointment
+  else Save failed
+    Booking --> UI: Booking error
+    UI --> Patient: Display failure; no confirmation
+  end
+else Slot is unavailable
+  Booking --> UI: Slot unavailable
+  UI --> Patient: Ask patient to select another slot
+end
+@enduml

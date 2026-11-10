@@ -1,0 +1,109 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+abstract class Account {
+  +accountId: UUID
+  +email: String
+  +status: AccountStatus
+}
+
+class Patient {
+  +displayName: String
+  +contactNumber: String
+}
+
+class ClinicStaff {
+  +displayName: String
+  +role: StaffRole
+}
+
+class AvailabilitySlot {
+  +slotId: UUID
+  +startsAt: DateTime
+  +endsAt: DateTime
+  +status: SlotStatus
+}
+
+class Appointment {
+  +appointmentId: UUID
+  +createdAt: DateTime
+  +status: AppointmentStatus
+  +cancel()
+  +reschedule(slot: AvailabilitySlot)
+}
+
+class QueueEntry {
+  +queueEntryId: UUID
+  +position: Integer
+  +status: QueueStatus
+  +updatedAt: DateTime
+}
+
+class Notification {
+  +notificationId: UUID
+  +channel: NotificationChannel
+  +message: String
+  +status: DeliveryStatus
+  +sentAt: DateTime
+}
+
+enum AccountStatus {
+  Active
+  Disabled
+}
+
+enum StaffRole {
+  Receptionist
+  Administrator
+}
+
+enum SlotStatus {
+  Available
+  Unavailable
+}
+
+enum AppointmentStatus {
+  Booked
+  Cancelled
+  Completed
+}
+
+enum QueueStatus {
+  Waiting
+  InService
+  Completed
+  Cancelled
+}
+
+enum NotificationChannel {
+  SMS
+  Email
+}
+
+enum DeliveryStatus {
+  Pending
+  Sent
+  Failed
+}
+
+Account <|-- Patient
+Account <|-- ClinicStaff
+
+ClinicStaff "0..*" -- "0..*" AvailabilitySlot : manages
+Patient "1" -- "0..*" Appointment : books
+AvailabilitySlot "1" -- "0..1" Appointment : reserved for
+Appointment "1" -- "0..1" QueueEntry : has
+Patient "1" -- "0..*" Notification : receives
+Appointment "0..1" -- "0..*" Notification : related to
+
+note right of Appointment
+An active appointment reserves one slot.
+Cancelled appointments do not reserve it.
+Enforce this rule when saving a booking.
+end note
+
+note bottom of QueueEntry
+Queue ordering and status transitions
+must be confirmed with clinic staff.
+end note
+@enduml
