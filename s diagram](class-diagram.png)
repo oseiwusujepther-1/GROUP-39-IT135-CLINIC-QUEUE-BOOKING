@@ -1,0 +1,9 @@
+[33mcommit 1921875889cb5f70c0b5dfa351f892822a3135b2[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: OSEI-WUSU JEPTHER <downtownliving69@gmail.com>
+Date:   Tue Nov 10 05:32:08 2026 +0000
+
+    Add proposal, process model, requirements and UML docs
+
+ README.md | 45 [32m++++++++++++++++++++++++++++++++++++++++++[m[31m---[m
+ ls        | 26 [32m++++++++++++++++++++++++++[m
+ 2 files changed, 68 insertions(+), 3 deletions(-)
