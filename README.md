@@ -30,7 +30,7 @@ Later (out of scope for now):
 | Name | GitHub | Role (weeks 1-3) |
 |------|--------|------------------|
 |Osei-wusu Jepther      | @      | Project manager  |
-|      | @      | Lead developer   |
+|     Peprah Aikins | @      | Lead developer   |
 |      | @      | Tester           |
 |      | @      | Documentation lead |
 
