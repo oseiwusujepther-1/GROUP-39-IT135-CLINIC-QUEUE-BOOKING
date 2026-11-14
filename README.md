@@ -30,9 +30,9 @@ Later (out of scope for now):
 | Name | GitHub | Role (weeks 1-3) |
 |------|--------|------------------|
 |Osei-wusu Jepther      | @      | Project manager  |
-|     Peprah Aikins | @      | Lead developer   |
+|Peprah Aikins | @      | Lead developer   |
 |      | @      | Tester           |
-|      | @      | Documentation lead |
+|Derrick Frimpong| @      | Documentation lead |
 
 ## Process model: Agile Scrum
 
