@@ -13,8 +13,14 @@ Many clinics still rely on manual appointment booking and long waiting lines, wh
 3. Queue status tracking - Patients can join a digital queue and monitor their position in real time through the system.
 4. Rescheduling and cancellation - Users can change or cancel appointments when needed without visiting the clinic in person.
 5. Admin and staff dashboard - Clinic staff can manage appointments, doctor schedules, queue updates, and patient records.
-6. Notifications and reminders - The system sends reminders for upcoming consultations and queue updates to patients.
+6. Notifications and reminders - The system sends reminders for upcoming consultations and queue updates to patients through Arkesel SMS notifications.
 7. Reporting and analytics - Staff can review appointment trends, waiting times, and service usage for better resource planning.
+
+### Arkesel features
+- Appointment confirmation SMS sent to patients after booking or rescheduling.
+- Queue update alerts that notify patients when their turn is approaching or when a clinic visit is delayed.
+- Reminders for upcoming consultations and follow-up messages for missed or cancelled appointments.
+- Secure verification messaging such as OTP-based patient validation and message delivery tracking for operational monitoring.
 
 Later (out of scope for now):
 - Online payment integration
@@ -23,7 +29,7 @@ Later (out of scope for now):
 - Integration with a hospital information system
 
 ## External service and data
-- External service: SMS notification provider such as Twilio, Arkesel, or a similar messaging gateway
+- External service: Arkesel SMS gateway for appointment reminders, queue notifications, verification messages, and delivery tracking
 - Data stored: users, patients, doctors, appointment records, queue status, clinic schedules, notifications, and administrative logs
 
 ## Team (roles rotate every 3 weeks)
