@@ -23,13 +23,13 @@ Later (out of scope for now):
 - Integration with a hospital information system
 
 ## External service and data
-- External service: SMS notification provider such as Twilio or a similar messaging gateway
+- External service: SMS notification provider such as Twilio, Arkesel, or a similar messaging gateway
 - Data stored: users, patients, doctors, appointment records, queue status, clinic schedules, notifications, and administrative logs
 
 ## Team (roles rotate every 3 weeks)
 | Name | GitHub | Role (weeks 1-3) |
 |------|--------|------------------|
-|Osei-wusu Jepther      | @      | Project manager  |
+|Osei-wusu Jepthe| @ | Project manager  |
 |Peprah Aikins | @      | Lead developer   |
 |      | @      | Tester           |
 |Derrick Frimpong| @      | Documentation lead |
