@@ -88,7 +88,7 @@ See the [process model document](docs/02-process-model/process-model.md).
 | docs/01-proposal | Problem statement, member profiles |
 | docs/02-process-model | Process model justification |
 | docs/03-requirements | SRS, requirements, elicitation notes |
-| docs/04-uml | UML diagrams |
+| docs/04-uml | UML diagrams, including the system overview architecture diagram |
 
 ## How to run
 To be completed when the first working increment is available.

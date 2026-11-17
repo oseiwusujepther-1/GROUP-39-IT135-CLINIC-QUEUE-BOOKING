@@ -1,0 +1,57 @@
+@startuml
+skinparam shadowing false
+skinparam packageStyle rectangle
+skinparam linetype ortho
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+skinparam titleFontSize 18
+left to right direction
+
+actor "Patient" as Patient
+actor "Staff" as Staff
+actor "Public Viewer" as Viewer
+
+package "Patient Area" {
+  component "register.php" as Register
+  component "login.php" as Login
+  component "book.php" as Book
+  component "dashboard.php" as Dashboard
+}
+
+package "Staff Area" {
+  component "staff/login.php" as StaffLogin
+  component "staff/dashboard.php" as StaffDashboard
+}
+
+component "queue.php" as QueueBoard
+
+rectangle "QueueService" as QueueService
+rectangle "SmsService" as SmsService
+database "MySQL / MariaDB" as DB
+component "Arkesel's Talking SMS" as SMSProvider
+
+Patient --> Register
+Patient --> Login
+Patient --> Book
+Patient --> Dashboard
+
+Staff --> StaffLogin
+Staff --> StaffDashboard
+Viewer --> QueueBoard
+
+Register --> QueueService : create account
+Login --> QueueService : login / session
+Book --> QueueService : book appointment
+Dashboard --> QueueService : check / cancel / status
+StaffDashboard --> QueueService : call next / manage queue
+QueueBoard --> QueueService : view public queue
+
+QueueService --> DB : read / write data
+QueueService --> SmsService : send notification
+SmsService --> SMSProvider : HTTP POST
+
+note right of QueueService
+Queue entries are stored in the database.
+Notifications are sent when a patient is updated.
+end note
+@enduml

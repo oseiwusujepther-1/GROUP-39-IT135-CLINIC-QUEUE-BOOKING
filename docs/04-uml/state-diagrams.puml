@@ -1,0 +1,27 @@
+@startuml
+skinparam state {
+  BackgroundColor White
+  BorderColor Black
+}
+
+state "Appointment Status" as AppointmentState {
+  [*] --> Booked
+  Booked --> Cancelled
+  Booked --> Completed
+  Booked --> InProgress
+  InProgress --> Completed
+  InProgress --> Cancelled
+  Cancelled --> [*]
+  Completed --> [*]
+}
+
+state "Queue Entry Status" as QueueState {
+  [*] --> Waiting
+  Waiting --> InService
+  Waiting --> Cancelled
+  InService --> Served
+  InService --> Cancelled
+  Served --> [*]
+  Cancelled --> [*]
+}
+@enduml
