@@ -35,10 +35,10 @@ Later (out of scope for now):
 ## Team (roles rotate every 3 weeks)
 | Name | GitHub | Role (weeks 1-3) |
 |------|--------|------------------|
-|Osei-wusu Jepthe| @oseiwusujepther-1 | Project manager  |
-|Peprah Aikins | @      | Lead developer   |
-|Hilda Kwakye    | @      | Tester           |
-|Derrick Frimpong| @      | Documentation lead |
+|Osei-wusu Jepther| @oseiwusujepther-1 | Project manager  |
+|Peprah Aikins | @peprahaikins01 | Lead developer   |
+|      | @      | Tester           |
+|Derrick Frimpong| @DerrickFrimpong361 | Documentation lead |
 
 ## Process model: Agile Scrum
 
