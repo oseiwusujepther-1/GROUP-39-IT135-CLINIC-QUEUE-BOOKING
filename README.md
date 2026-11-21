@@ -37,7 +37,7 @@ Later (out of scope for now):
 |------|--------|------------------|
 |Osei-wusu Jepther| @oseiwusujepther-1 | Project manager  |
 |Peprah Aikins | @peprahaikins01 | Lead developer   |
-|Hilda Kwakye      | @      | Tester           |
+|Hilda Kwakye | @      | Tester           |
 |Derrick Frimpong| @DerrickFrimpong361 | Documentation lead |
 
 ## Process model: Agile Scrum
