@@ -33,12 +33,12 @@ Later (out of scope for now):
 - Data stored: users, patients, doctors, appointment records, queue status, clinic schedules, notifications, and administrative logs
 
 ## Team (roles rotate every 3 weeks)
-| Name | GitHub | Role (weeks 1-3) |
-|------|--------|------------------|
-|Osei-wusu Jepther| @oseiwusujepther-1 | Project manager  |
-|Peprah Aikins | @peprahaikins01 | Lead developer   |
-|      | @      | Tester           |
-|Derrick Frimpong| @DerrickFrimpong361 | Documentation lead |
+| Name            | GitHub              | Role (weeks 1-3) |
+|-----------------|---------------------|------------------|
+|Osei-wusu Jepther| @oseiwusujepther-1  | Project manager  |
+|Peprah Aikins    | @peprahaikins01     | Lead developer   |
+|                 | @                   | Tester           |
+|Derrick Frimpong | @DerrickFrimpong361 | Documentation lead |
 
 ## Process model: Agile Scrum
 
