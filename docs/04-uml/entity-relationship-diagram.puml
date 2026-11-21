@@ -1,0 +1,68 @@
+@startuml
+hide circle
+skinparam linetype ortho
+
+entity Patient {
+  * patient_id : UUID
+  --
+  name : VARCHAR
+  phone : VARCHAR
+  password_hash : VARCHAR
+  created_at : DATETIME
+}
+
+entity Staff {
+  * staff_id : UUID
+  --
+  name : VARCHAR
+  role : VARCHAR
+  email : VARCHAR
+  password_hash : VARCHAR
+  created_at : DATETIME
+}
+
+entity AvailabilitySlot {
+  * slot_id : UUID
+  --
+  staff_id : UUID
+  starts_at : DATETIME
+  ends_at : DATETIME
+  status : VARCHAR
+}
+
+entity Appointment {
+  * appointment_id : UUID
+  --
+  patient_id : UUID
+  slot_id : UUID
+  status : VARCHAR
+  booked_at : DATETIME
+  notes : TEXT
+}
+
+entity QueueEntry {
+  * queue_entry_id : UUID
+  --
+  appointment_id : UUID
+  queue_number : INT
+  position : INT
+  status : VARCHAR
+  updated_at : DATETIME
+}
+
+entity Notification {
+  * notification_id : UUID
+  --
+  appointment_id : UUID
+  channel : VARCHAR
+  message : TEXT
+  status : VARCHAR
+  sent_at : DATETIME
+}
+
+Patient ||--o{ Appointment
+Staff ||--o{ AvailabilitySlot
+AvailabilitySlot ||--o| Appointment
+Appointment ||--o| QueueEntry
+Appointment ||--o{ Notification
+@enduml

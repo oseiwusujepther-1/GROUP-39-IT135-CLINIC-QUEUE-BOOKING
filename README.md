@@ -37,7 +37,7 @@ Later (out of scope for now):
 |------|--------|------------------|
 |Osei-wusu Jepthe| @oseiwusujepther-1 | Project manager  |
 |Peprah Aikins | @      | Lead developer   |
-| Hilda Kwakye | @  hildakwakye    | Tester           |
+|Hilda Kwakye    | @      | Tester           |
 |Derrick Frimpong| @      | Documentation lead |
 
 ## Process model: Agile Scrum
@@ -88,7 +88,7 @@ See the [process model document](docs/02-process-model/process-model.md).
 | docs/01-proposal | Problem statement, member profiles |
 | docs/02-process-model | Process model justification |
 | docs/03-requirements | SRS, requirements, elicitation notes |
-| docs/04-uml | UML diagrams |
+| docs/04-uml | UML diagrams, including the system overview architecture diagram |
 
 ## How to run
 To be completed when the first working increment is available.

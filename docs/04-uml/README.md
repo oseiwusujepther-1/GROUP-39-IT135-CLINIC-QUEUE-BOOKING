@@ -1,21 +1,37 @@
 # UML Diagrams
 
-These diagrams are maintained as **PlantUML source files** (`.puml`). The source is plain text, so it can be reviewed, changed, versioned, and pushed to GitHub like other project files. The diagrams are design proposals based on the current SRS and must be updated if stakeholder decisions change the requirements.
+## 1. Architecture overview
 
-## Diagrams
+![Architecture overview](./system-overview.png)
 
-- [Use-case diagram](./use-case-diagram.puml) — patient and clinic staff capabilities.
-- [Class diagram](./class-diagram.puml) — proposed core domain entities and relationships.
-- [Appointment-booking sequence diagram](./appointment-booking-sequence.puml) — successful booking and unavailable-slot/error paths.
+[System overview source](./system-overview.puml)
 
-## Viewing and rendering
+## 2. Use case diagram
 
-The `.puml` files can be opened in a text editor and rendered with a PlantUML-compatible viewer or the PlantUML extension in VS Code. Rendering is optional; commit the `.puml` source files so the diagrams remain editable and reviewable. Do not put real patient information in diagram examples.
+![Use case diagram](./use-case-diagram.png)
 
-## Modeling assumptions to confirm
+[Use-case source](./use-case-diagram.puml)
 
-- Patients and staff have separate permissions.
-- Appointment availability is represented by clinic-managed time slots.
-- A slot can have at most one active appointment.
-- Queue information is associated with a booked appointment; the clinic still needs to confirm how queue order and updates work.
-- Notifications are optional and depend on selecting an external provider.
+## 3. Class diagram
+
+![Class diagram](./class-diagram.png)
+
+[Class diagram source](./class-diagram.puml)
+
+## 4. Entity relationship diagram
+
+![Entity relationship diagram](./entity-relationship-diagram.png)
+
+[ER diagram source](./entity-relationship-diagram.puml)
+
+## 5. Sequence diagram
+
+![Sequence diagram](./appointment-booking-sequence.png)
+
+[Appointment-booking sequence source](./appointment-booking-sequence.puml)
+
+## 6. State diagrams
+
+![State diagrams](./state-diagrams.png)
+
+[State diagram source](./state-diagrams.puml)
